@@ -31,13 +31,13 @@ const errorMessageEnding string = baseconfig.Reset + " ] "
 
 // CreateLog prints out a log message depends on application life cycle.
 // This module reads first the result of environment parameter REST_APP.
-// If REST_APP is equal to "PRODUCTION", the logs will be generated in /var/log/syslog otherwise
+// If PKLOG is equal to "PRODUCTION", the logs will be generated in /var/log/syslog otherwise
 // the logs will be displayed with color on standard display.
 // logLevel accepts four types of log level: FatalError(0), Error (10), Warning (20) and Info (30).
 // s is the log message which is of type string.
 func CreateLog(logLevel int, s string) {
 
-	softwareLifeCycle := os.Getenv("REST_APP")
+	softwareLifeCycle := os.Getenv("PKLOG")
 	appName := filepath.Base(os.Args[0])
 
 	logwriter, err := syslog.New(syslog.LOG_DEBUG, appName)
