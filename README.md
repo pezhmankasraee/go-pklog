@@ -3,7 +3,7 @@ __go-pklog__ providing log files on syslog and live on stdout written in Golang.
 * syslog
 * stdout
 
-## Badgets
+## Badges
 ![golang version](https://img.shields.io/badge/golang-v1.13-lightblue)
 
 ## Author
